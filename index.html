@@ -105,23 +105,23 @@
       }
     </style>
     <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '879357341209527');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=879357341209527&ev=PageView&noscript=1"
-  />
-  </noscript>
-  <!-- End Meta Pixel Code -->
+ <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '913276431500940');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=913276431500940&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
   </head>
 
   <body>
@@ -171,22 +171,25 @@
       // }
 
       function startProgressBar() {
-          const bar = document.getElementById("progress-bar");
-          let width = 0;
-          const duration = 100; // 0.1ms
-          const interval = 10;
-          const step = (interval / duration) * 100;
-      
-          const timer = setInterval(() => {
-              width += step;
-              bar.style.width = width + "%";
-      
-              if (width >= 100) {
-                  clearInterval(timer);
-                  finalize();
-              }
-          }, interval);
-      }
+        const bar = document.getElementById("progress-bar");
+        let width = 0;
+    
+        const duration = 3000; // total time = 3 seconds (3000ms)
+        const interval = 10;   // update every 10ms
+    
+        const step = (interval / duration) * 100;
+    
+        const timer = setInterval(() => {
+            width += step;
+            bar.style.width = width + "%";
+    
+            if (width >= 100) {
+                bar.style.width = "100%";
+                clearInterval(timer);
+                finalize();
+            }
+        }, interval);
+    }
 
 
       function finalize() {
@@ -199,7 +202,7 @@
         // }
 
         /* Human + region allowed → redirect */
-        window.location.href = "https://www.effectivegatecpm.com/rtz9b00ph2?key=327d2704a569d3d45f520b229f15a500"; //https://www.effectivegatecpm.com/ncdhi3beza?key=6c7bea72975cd85fcfab5b2a6bb3b757
+        window.location.href = "https://www.effectivegatecpm.com/kbi6s9byhe?key=59dff4b82b1e7ede56b57d1cfb7de974"; //https://www.effectivegatecpm.com/ncdhi3beza?key=6c7bea72975cd85fcfab5b2a6bb3b757
       }
 
       // checkGeo();
