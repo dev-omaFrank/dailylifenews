@@ -194,15 +194,42 @@ src="https://www.facebook.com/tr?id=913276431500940&ev=PageView&noscript=1"
 
       function finalize() {
 
-        /* REGION BLOCK AFTER LOADER */
-        // if (!userAllowedRegion) {
-        //   document.querySelector(".page-shade").style.display = "none";
-        //   document.getElementById("blocked-message").style.display = "block";
-        //   return;
-        // }
-
-        /* Human + region allowed → redirect */
-        window.location.href = "https://www.effectivegatecpm.com/kbi6s9byhe?key=59dff4b82b1e7ede56b57d1cfb7de974"; //https://www.effectivegatecpm.com/ncdhi3beza?key=6c7bea72975cd85fcfab5b2a6bb3b757
+       function finalize() {
+          const modal = document.getElementById("content-modal");
+        
+          modal.innerHTML = `
+            <h1 style="color:#d32f2f; font-weight: bold;">
+              ⚠ Warning: Viewer discretion advised.
+            </h1>
+        
+            <p style="font-size: 1.05rem; margin-top: 15px;">
+              You are about to watch a rare moment caught on camera.<br><br>
+              Most people are not prepared for what happened seconds later.
+            </p>
+        
+            <p style="margin-top: 15px; font-weight: bold;">
+              ▶ Watch the full video. Tap the button below to watch the unedited video.
+            </p>
+        
+            <button onclick="goToOffer()" 
+              style="
+                margin-top: 20px;
+                padding: 14px 24px;
+                font-size: 1rem;
+                background: #4caf50;
+                color: #fff;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+              ">
+              Watch Now
+            </button>
+          `;
+        }
+        
+        function goToOffer() {
+          window.location.href = "https://www.effectivegatecpm.com/kbi6s9byhe?key=59dff4b82b1e7ede56b57d1cfb7de974";
+        } //https://www.effectivegatecpm.com/ncdhi3beza?key=6c7bea72975cd85fcfab5b2a6bb3b757
       }
 
       // checkGeo();
