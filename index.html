@@ -147,93 +147,67 @@ src="https://www.facebook.com/tr?id=913276431500940&ev=PageView&noscript=1"
       Automated activity detected. Content cannot be loaded.
     </div>
 
-    <script>
-      /* ---------------------------------------------------
-   GEO + LOADER + FINAL DECISION
-----------------------------------------------------*/
-      // const allowedCountries = ["MZ"];
+  <script>
+  // Start loader immediately
+  startProgressBar();
 
-      // let userAllowedRegion = false; // store result
+  function startProgressBar() {
+    const bar = document.getElementById("progress-bar");
+    let width = 0;
 
-      // async function checkGeo() {
-      //   try {
-      //     const res = await fetch("https://ipapi.co/json/");
-      //     const data = await res.json();
-      //     const userCountry = data.country?.toUpperCase() ?? null;
+    const duration = 3000;
+    const interval = 10;
+    const step = (interval / duration) * 100;
 
-      //     userAllowedRegion = allowedCountries.includes(userCountry);
-      //   } catch (err) {
-          // If geo lookup fails, default allow (or choose false)
-        //   userAllowedRegion = true;
-        // }
+    const timer = setInterval(() => {
+      width += step;
+      bar.style.width = width + "%";
 
-        startProgressBar();
-      // }
-
-      function startProgressBar() {
-        const bar = document.getElementById("progress-bar");
-        let width = 0;
-    
-        const duration = 3000; // total time = 3 seconds (3000ms)
-        const interval = 10;   // update every 10ms
-    
-        const step = (interval / duration) * 100;
-    
-        const timer = setInterval(() => {
-            width += step;
-            bar.style.width = width + "%";
-    
-            if (width >= 100) {
-                bar.style.width = "100%";
-                clearInterval(timer);
-                finalize();
-            }
-        }, interval);
-    }
-
-
-      function finalize() {
-
-       function finalize() {
-          const modal = document.getElementById("content-modal");
-        
-          modal.innerHTML = `
-            <h1 style="color:#d32f2f; font-weight: bold;">
-              ⚠ Warning: Viewer discretion advised.
-            </h1>
-        
-            <p style="font-size: 1.05rem; margin-top: 15px;">
-              You are about to watch a rare moment caught on camera.<br><br>
-              Most people are not prepared for what happened seconds later.
-            </p>
-        
-            <p style="margin-top: 15px; font-weight: bold;">
-              ▶ Watch the full video. Tap the button below to watch the unedited video.
-            </p>
-        
-            <button onclick="goToOffer()" 
-              style="
-                margin-top: 20px;
-                padding: 14px 24px;
-                font-size: 1rem;
-                background: #4caf50;
-                color: #fff;
-                border: none;
-                border-radius: 6px;
-                cursor: pointer;
-              ">
-              Watch Now
-            </button>
-          `;
-        }
-        
-        function goToOffer() {
-          window.location.href = "https://www.effectivegatecpm.com/kbi6s9byhe?key=59dff4b82b1e7ede56b57d1cfb7de974";
-        } //https://www.effectivegatecpm.com/ncdhi3beza?key=6c7bea72975cd85fcfab5b2a6bb3b757
+      if (width >= 100) {
+        bar.style.width = "100%";
+        clearInterval(timer);
+        finalize();
       }
+    }, interval);
+  }
 
-      // checkGeo();
-    </script>
+  function finalize() {
+    const modal = document.getElementById("content-modal");
+
+    modal.innerHTML = `
+      <h1 style="color:#d32f2f; font-weight: bold;">
+        ⚠ Warning: Viewer discretion advised.
+      </h1>
+
+      <p style="font-size: 1.05rem; margin-top: 15px;">
+        You are about to watch a rare moment caught on camera.<br><br>
+        Most people are not prepared for what happened seconds later.
+      </p>
+
+      <p style="margin-top: 15px; font-weight: bold;">
+        ▶ Watch the full video. Tap the button below to watch the unedited video.
+      </p>
+
+      <button onclick="goToOffer()" 
+        style="
+          margin-top: 20px;
+          padding: 14px 24px;
+          font-size: 1rem;
+          background: #4caf50;
+          color: #fff;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+        ">
+        Watch Now
+      </button>
+    `;
+  }
+
+  function goToOffer() {
+    window.location.href = "https://www.effectivegatecpm.com/kbi6s9byhe?key=59dff4b82b1e7ede56b57d1cfb7de974";
+  }
+</script>
     
   </body>
 </html>
